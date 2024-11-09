@@ -1,4 +1,3 @@
-
 # Godx
 
 **Godx** is a Go module providing various utilities to enhance developer experience. The package includes structured approaches to manage events, commands, and functional operations, leveraging the options pattern and middleware.
@@ -41,7 +40,7 @@ Provides coalescing utilities for finding the first non-zero or non-nil value in
   - `FirstNonZero`: Returns the first non-zero element in a list.
   - `Coalesce`: General-purpose coalescing function for non-zero or non-nil values.
 
-### 4. `xslice`
+### 4. `xslices`
 Functional utilities for slices.
 - **Example Functions**:
   - `Map`: Applies a transformation to each element in a slice.
@@ -69,11 +68,11 @@ Import the required packages from `godx` and use the modules as needed.
 
 ```go
 import (
-    "github.com/kindalus/godx/event"
-    "github.com/kindalus/godx/command"
-    "github.com/kindalus/godx/xslice"
-    "github.com/kindalus/godx/coalesce"
-    "github.com/kindalus/godx/assert"
+    "github.com/kindalus/godx/pkg/event"
+    "github.com/kindalus/godx/pkg/command"
+    "github.com/kindalus/godx/pkg/xslices"
+    "github.com/kindalus/godx/pkg/coalesce"
+    "github.com/kindalus/godx/pkg/assert"
 )
 ```
 

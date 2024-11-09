@@ -39,7 +39,7 @@ func (p *inmemEventBus) Publish(e Event) {
 	p.queue = append(p.queue, e)
 
 	if len(p.queue) == 1 {
-		p.start()
+		go p.start()
 	}
 }
 
