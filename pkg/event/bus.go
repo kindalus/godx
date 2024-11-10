@@ -34,12 +34,11 @@ func (p *inmemEventBus) PublishAll(events ...Event) {
 
 func (p *inmemEventBus) Publish(e Event) {
 	p.mutex.Lock()
-	defer p.mutex.Unlock()
-
 	p.queue = append(p.queue, e)
+	p.mutex.Unlock()
 
 	if len(p.queue) == 1 {
-		go p.start()
+		p.start()
 	}
 }
 
